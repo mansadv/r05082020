@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "name": "item"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "itemName": {
+      "type": "string"
+    },
+    "itemDescription": {
+      "type": "string"
+    },
+    "itemPrice": {
+      "type": "decimal"
+    },
+    "categoryName": {
+      "via": "items",
+      "model": "category"
+    }
+  }
+}
